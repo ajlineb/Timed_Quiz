@@ -108,6 +108,16 @@ li {
     text-align: center;
 }
 
+.customBtn {
+    background-color: rgb(83, 0, 161);
+    border: solid 1px #d300ff;
+}
+
+.end {
+    display: none;
+    text-align: center;
+}
+
 .total-pts {
     display: none;
 }
@@ -118,4 +128,9 @@ li {
 
 .button:hover {
     background-color: rgb(132, 34, 224);
+}
+
+.customBtn:hover {
+    background-color: rgb(119, 4, 226);
+    border: solid 1px #ff1f00;
 }

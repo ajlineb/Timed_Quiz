@@ -2,6 +2,8 @@
 var timeEl = document.querySelector(".time");
 var startBtn = document.querySelector(".start");
 var homeEl = document.querySelector(".home");
+var customBtnEl = document.querySelector(".customBtn");
+var inputEl = document.querySelector("#initials")
 
 var question1 = document.querySelector(".question-1");
 var question2 = document.querySelector(".question-2");
@@ -16,6 +18,7 @@ var answerC = document.getElementsByClassName("c");
 var answerD = document.getElementsByClassName("d");
 
 var resultEl = document.querySelectorAll(".result");
+var goToEl = document.querySelector(".end");
 var finalPts = document.querySelector(".total-pts");
 
 
@@ -38,6 +41,8 @@ var timer;
 var points;
 var secondsLeft;
 var isFinished;
+var initials;
+var users = [];
 
 //starts the quiz and alerts the timer
 function startGame() {
@@ -247,6 +252,44 @@ function finished() {
     isFinished = true;
 };
 
+function clearForm() {
+    summEl.style.display = "none";
+    goToEl.style.display = "inline-block";
+}
+
+function storeTodos() {
+    localStorage.setItem("Users", JSON.stringify(users));
+  }
+
+//initializes the page to store any previous Users
+function init() {
+    var storedUsers = JSON.parse(localStorage.getItem("Users"));
+    if (storedUsers !== null) {
+      users = storedUsers;
+    }
+} 
+
+//stores users into local storage
+function storeUsers() {
+    localStorage.setItem("Users", JSON.stringify(users));
+}
+
+//on submit pushes user info into array to be stored
+customBtnEl.addEventListener("click", function(event) {
+    event.preventDefault();
+    var userText = inputEl.value.trim();
+    if (userText === "") {
+      return;
+    }
+    users.push({userText, points});
+    inputEl.value = "";
+   console.log(users)
+    storeUsers();
+    clearForm();
+    //renderTodos();
+});
+
+
 //these functions assign the letter/choice that got chosen to true and all others to false
 function checkAnswerA() {
     a = true;
@@ -335,6 +378,7 @@ function checkAnswerD() {
 
 //starts the game quiz
 startBtn.addEventListener("click", startGame);
+init();
 
 // had to create for loops that go through and put event listeners on each button
 for (var i = 0; i < answerA.length; i++) {

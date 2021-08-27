@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Astronomy Quiz</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="./Assets/CSS/reset.css">
     <link rel="stylesheet" href="./Assets/CSS/style.css">
 
@@ -88,6 +89,20 @@
             <h2>Finished!</h2>
             <br>
             <h3>Your final Score is...<h4 class="total-pts"></h4></h3>
+            <form>
+                <div class="form-group">
+                  <label for="initials">Enter your Initials!</label>
+                  <input type="text" class="form-control input" id="initials" aria-describedby="emailHelp">
+                  <small id="emailHelp" class="form-text text-muted">Hope you enjoyed the quiz!</small>
+                  <button type="submit" class="btn btn-primary customBtn">Submit</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="end">
+            <h2>Check out the highscores page!</h2>
+            <br>
+            <a href="./highscores.html"><button class="button goToHighScores">High Scores</button></a>
         </section>
     </main>
 
@@ -96,5 +111,7 @@
 </body>
 
 <script src="./Assets/JS/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
 </html>
