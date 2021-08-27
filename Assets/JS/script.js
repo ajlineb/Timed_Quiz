@@ -2,98 +2,42 @@
 var timeEl = document.querySelector(".time");
 var startBtn = document.querySelector(".start");
 var homeEl = document.querySelector(".home");
+
 var question1 = document.querySelector(".question-1");
 var question2 = document.querySelector(".question-2");
 var question3 = document.querySelector(".question-3");
 var question4 = document.querySelector(".question-4");
 var question5 = document.querySelector(".question-5");
 var summEl = document.querySelector(".summary");
-//var answerA = document.querySelectorAll(".a");
-var answerB = document.querySelectorAll(".b");
-var answerC = document.querySelectorAll(".c");
-var answerD = document.querySelectorAll(".d");
+
+var answerA = document.getElementsByClassName("a");
+var answerB = document.getElementsByClassName("b");
+var answerC = document.getElementsByClassName("c");
+var answerD = document.getElementsByClassName("d");
+
 var resultEl = document.querySelectorAll(".result");
 var finalPts = document.querySelector(".total-pts");
-var answerA = document.getElementsByClassName("a");
-console.log(resultEl);
-console.log(resultEl[0]);
 
 
 
+//answer variables
 var a;
 var b;
 var c;
 var d;
 
+//question position variables
 var on1;
 var on2;
 var on3;
 var on4;
 var on5;
 
+//timer and point variables
 var timer;
 var points;
 var secondsLeft;
 var isFinished;
-
-
-// var questions = [
-//     {
-//         question: "What is another name for the 'four gas giants' in our solar system?",
-//         answers: {
-//             a: "A. Wavy planets",
-//             b: "B. Super Gases",
-//             c: "C. Jovian planets",
-//             d: "D. Ice Giants"
-//         },
-//         correctAnswer: "C"
-//     },
-
-//     {
-//         question: "Why do we always see the same side of the moon?",
-//         answers: {
-//             a: "A. It really wants to show its good side!",
-//             b: "B. B. It stopped turning",
-//             c: "C. Its pure luck?",
-//             d: "D. It is tidally locked"
-//         },
-//         correctAnswer: "D"
-//     },
-
-//     {
-//         question: "At what point are we the farthest from the sun?",
-//         answers: {
-//             a: "A. Summer",
-//             b: "B. Winter",
-//             c: "C. Spring",
-//             d: "D. Fall"
-//         },
-//         correctAnswer: "B"
-//     },
-
-//     {
-//         question: "Which 'periodic' comet returns to Earth's vicinity just about every 75 years?",
-//         answers: {
-//             a: "A. Hyakutake",
-//             b: "B. Hale Bopp",
-//             c: "C. Halley's Comet",
-//             d: "D. Comet Borrelly"
-//         },
-//         correctAnswer: "C"
-//     },
-
-//         {
-//         question: "What is my favorite planet?",
-//         answers: {
-//             a: "A. Mars",
-//             b: "B. Saturn",
-//             c: "C. Jupiter",
-//             d: "D. Venus"
-//         },
-//         correctAnswer: "C"
-//     }
-
-// ];
 
 //starts the quiz and alerts the timer
 function startGame() {
@@ -395,28 +339,24 @@ startBtn.addEventListener("click", startGame);
 // had to create for loops that go through and put event listeners on each button
 for (var i = 0; i < answerA.length; i++) {
     answerA[i].addEventListener("click", function () {
-        console.log("yus a");
         checkAnswerA();
     });
 }
 
 for (var i = 0; i < answerB.length; i++) {
     answerB[i].addEventListener("click", function () {
-        console.log("yus b");
         checkAnswerB();
     });
 }
 
 for (var i = 0; i < answerC.length; i++) {
     answerC[i].addEventListener("click", function () {
-        console.log("yus c");
         checkAnswerC();
     });
 }
 
 for (var i = 0; i < answerD.length; i++) {
     answerD[i].addEventListener("click", function () {
-        console.log("yus d");
         checkAnswerD();
     });
 }
