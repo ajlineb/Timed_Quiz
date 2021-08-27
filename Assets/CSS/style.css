@@ -1,0 +1,121 @@
+:root {
+    --header-color: white;
+    --header-background:rgb(160, 16, 255);
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-image: linear-gradient(
+        var(--header-background) 0%,
+        rgb(76, 44, 97) 100%);
+    color: var(--header-color);
+    border-bottom: solid 1px rgb(59, 4, 95);
+}
+
+body {
+    background-color: rgb(43, 41, 41);
+    color: white;
+}
+
+/*link decorations*/
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+    color: var(--header-color);
+}
+
+header h1 {
+    margin: 1rem;
+    padding:0px 5px 2px 5px;
+    border-bottom: solid 5px rgb(57, 18, 94);
+    border-bottom-left-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 75vh;
+}
+
+main section {
+    width: 40rem;
+}
+
+li {
+    line-height: 1.7rem;
+}
+
+.home {
+    display: inline-block;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.start {
+    background-color: blueviolet;
+    color: white;
+    border-radius: 20px;
+    padding: .2rem 1rem .2rem 1rem;
+    margin-top: 1rem;
+}
+
+.questions {
+    line-height: 1.5rem;
+    padding: 5rem;
+}
+
+.question-1 {
+    display: none;
+}
+
+.question-2 {
+    display: none;
+}
+
+.question-3 {
+    display: none;
+}
+
+.question-4 {
+    display: none;
+}
+
+.question-5 {
+    display: none;
+}
+.result {
+    display: none;
+    width: 100%;
+    border-top: solid 3px rgb(255, 255, 255);
+    padding-top: 1rem;
+}
+
+.button {
+    background-color: rgb(83, 0, 161);
+    color: white;
+    border-radius: 20px;
+    padding: .2rem;
+    margin:0.5rem 0rem 0.5rem 0rem;
+}
+
+.summary {
+    display: none;
+    line-height: 1.5rem;
+    padding: 5rem;
+    text-align: center;
+}
+
+.total-pts {
+    display: none;
+}
+
+.start:hover {
+    background-color: rgb(171, 81, 255)
+}
+
+.button:hover {
+    background-color: rgb(132, 34, 224);
+}
