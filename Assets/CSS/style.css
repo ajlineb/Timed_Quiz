@@ -48,6 +48,14 @@ li {
     line-height: 1.7rem;
 }
 
+.h-top {
+    justify-content: center;
+}
+
+.highscores-main {
+    flex-direction: column;
+}
+
 .home {
     display: inline-block;
     text-align: center;
@@ -133,4 +141,13 @@ li {
 .customBtn:hover {
     background-color: rgb(119, 4, 226);
     border: solid 1px #ff1f00;
+}
+
+#userlist li {
+    background-image: linear-gradient(
+270deg
+, #7d1aff, transparent);
+    border-radius: 1rem;
+    text-align: center;
+    margin: 1rem;
 }

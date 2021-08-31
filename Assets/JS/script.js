@@ -20,6 +20,7 @@ var answerD = document.getElementsByClassName("d");
 var resultEl = document.querySelectorAll(".result");
 var goToEl = document.querySelector(".end");
 var finalPts = document.querySelector(".total-pts");
+var userListEl = document.getElementsByClassName("userList");
 
 
 
@@ -85,8 +86,8 @@ function question_1() {
         c = false;
         d = false;
         points += 20;
-        resultEl[0].textContent = "Correct!";
-        resultEl[0].style.display = "inline-block"
+        resultEl[0].textContent = "Correct!";       //multple result classes in an array, picks the correct result to display and writes in correct or incorrect
+        resultEl[0].style.display = "inline-block"  //~~~~~~~~~~~~~~~~~~~~~~~~
         setTimeout(function(){
             question_2();
         }, 1000); 
@@ -104,7 +105,6 @@ function question_1() {
         }, 1000); 
     }
 };
-
 
 function question_2() {
     question1.style.display = "none";
@@ -252,20 +252,20 @@ function finished() {
     isFinished = true;
 };
 
+//clears the form page and adds the end button to checkout the highscores
+//added so that the user would only submit once a session
 function clearForm() {
     summEl.style.display = "none";
     goToEl.style.display = "inline-block";
 }
 
-function storeTodos() {
-    localStorage.setItem("Users", JSON.stringify(users));
-  }
 
 //initializes the page to store any previous Users
 function init() {
     var storedUsers = JSON.parse(localStorage.getItem("Users"));
     if (storedUsers !== null) {
       users = storedUsers;
+      //renderUsers();
     }
 } 
 
@@ -283,10 +283,10 @@ customBtnEl.addEventListener("click", function(event) {
     }
     users.push({userText, points});
     inputEl.value = "";
-   console.log(users)
+    console.log(users)
     storeUsers();
     clearForm();
-    //renderTodos();
+    
 });
 
 
@@ -380,7 +380,7 @@ function checkAnswerD() {
 startBtn.addEventListener("click", startGame);
 init();
 
-// had to create for loops that go through and put event listeners on each button
+//for loops that go through and put event listeners on each button
 for (var i = 0; i < answerA.length; i++) {
     answerA[i].addEventListener("click", function () {
         checkAnswerA();
