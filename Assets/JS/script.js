@@ -179,6 +179,7 @@ function question_4() {
         c = false;
         d = false;
         points += 20;
+        console.log("4 right")
         resultEl[3].textContent = "Correct!";
         resultEl[3].style.display = "inline-block"
         setTimeout(function(){
@@ -190,6 +191,7 @@ function question_4() {
         b = false;
         c = false;
         d = false;
+        console.log("4 wrong")
         resultEl[3].textContent = "Incorrect!";
         resultEl[3].style.display = "inline-block";
         secondsLeft-= 10;
@@ -209,6 +211,7 @@ function question_5() {
         b = false;
         c = false;
         d = false;
+        console.log("5 right")
         points += 20;
         resultEl[4].textContent = "Correct!";
         resultEl[4].style.display = "inline-block"
@@ -221,6 +224,7 @@ function question_5() {
         b = false;
         c = false;
         d = false;
+        console.log("5 wrong")
         resultEl[4].textContent = "Incorrect!";
         resultEl[4].style.display = "inline-block";
         secondsLeft-= 10;
