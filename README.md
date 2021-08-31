@@ -10,7 +10,7 @@ These values are recorded in the local storage and rendered on the highscore pag
 
 GitHub repository: https://github.com/ajlineb/Timed_Quiz
 
-Webpage:
+Webpage: https://ajlineb.github.io/Timed_Quiz/
 
 ## Usage
 
